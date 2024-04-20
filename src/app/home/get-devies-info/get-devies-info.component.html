@@ -2,7 +2,8 @@
     <mat-toolbar>
         <button mat-icon-button routerLink="/home"><mat-icon>keyboard_arrow_left</mat-icon></button>
         <span>Your Devies ID </span>
-        <span></span>
+        <button mat-icon-button ></button>
+
     </mat-toolbar>
 
     <div id="content">
@@ -15,7 +16,11 @@
         <div class="box">
             {{model_name}}
         </div>
-        <button class="btn" (click)="copyToClipboard()" mat-raised-button color="primary">Copy Text  <img src="../../../assets/icon/copy.png" alt="" width="15px" height="15px"></button>
+        <br>
+        <div class="btnarea">
+            <button  (click)="copyToClipboard()" mat-raised-button color="primary">Copy Text  <img src="../../../assets/icon/copy.png" alt="" width="15px" height="15px"></button>
+
+        </div>
 
     </div>
 </div>

@@ -1,9 +1,9 @@
 #wrapper {
     width: 100%;
-    height: auto;
+    height: 100vh;
     background-color: #fafafa;
     margin: 0px;
-  
+
   }
   mat-toolbar {
     display: flex;
@@ -30,7 +30,7 @@
   }
 
   #box{
-    height: calc(100vh - 200px);
+    height: calc(100vh - 125px);
     overflow-x: auto;
   }
 

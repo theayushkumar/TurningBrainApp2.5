@@ -50,7 +50,7 @@
                 Result<mat-icon>keyboard_arrow_right</mat-icon>
             </button>
 
-            <button *ngIf="mcq_data.length == qustion_no+1" color="primary" routerLink="/mcqreview">
+            <button *ngIf="mcq_data.length == qustion_no+1" color="primary" (click)="review()" >
                 Review <mat-icon>keyboard_arrow_right</mat-icon>
             </button>
 

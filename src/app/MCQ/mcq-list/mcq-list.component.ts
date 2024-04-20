@@ -4,6 +4,7 @@ import { CrudService } from 'src/app/servies/crud.service';
 import { SharedService } from 'src/app/servies/shared.service';
 import { ResultComponent } from '../result/result.component';
 import { IntroducatioComponent } from '../introducatio/introducatio.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mcq-list',
@@ -29,7 +30,8 @@ export class McqListComponent implements OnInit {
   constructor(
     private _crud: CrudService,
     private _shared: SharedService,
-    private _dilog: MatDialog
+    private _dilog: MatDialog,
+    private _router : Router
   ) {
 
     this.login = localStorage.getItem('loginData')
@@ -155,7 +157,16 @@ export class McqListComponent implements OnInit {
     this.get_review()
 
   }
-
+  review(){
+    this._crud.get_review_mcq(this.login_data.id).subscribe(
+      (res: any) => {
+        console.log(res);
+        if (res.length > 0) {
+            this._router.navigate(['/mcqreview'])
+        }
+      }
+    )
+  }
 
 
   marks_mcq(opt: string) {

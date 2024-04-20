@@ -33,6 +33,10 @@ mat-toolbar {
     padding: 10px 3px;
 }
 
-.btn {
-    margin-left: 40%;
+
+
+.btnarea{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

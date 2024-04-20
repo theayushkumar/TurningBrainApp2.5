@@ -29,10 +29,13 @@ mat-toolbar {
     font-size: 15px;
 }
 
-.box{
+.box {
     width: 100%;
-    height: auto;    
+    height: auto;
+    display: flex;
+    align-items: center;
 }
+
 .opction {
     width: calc(100% - 55px);
     height: auto;
@@ -95,7 +98,7 @@ mat-toolbar {
         4px 4px 5px 0px rgba(0, 0, 0, .3);
 }
 
-.btnarea mat-icon{
+.btnarea mat-icon {
     position: relative;
     top: 7px;
 }
@@ -133,4 +136,3 @@ mat-toolbar {
     background-color: red;
     color: whitesmoke;
 }
-
