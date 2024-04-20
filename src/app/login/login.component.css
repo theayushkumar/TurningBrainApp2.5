@@ -1,0 +1,121 @@
+#wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+#logo {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+
+#box {
+    width: 100%;
+}
+
+#from_area {
+    width: 80%;
+    margin: 0px auto;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+}
+
+.forget {
+    width: 80%;
+    font-size: 11px;
+    margin: 0px auto;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 0px;
+
+}
+
+.login {
+    width: 100%;
+    font-size: 13px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+}
+
+.login a {
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn {
+    width: 100%;
+    height: 60px;
+    border-radius: 50px;
+    background-color: #30517a;
+    font-size: 25px;
+    color: whitesmoke;
+}
+
+
+
+.inputField {
+    width: 100%;
+    min-height: 330px;
+    text-align: center;
+    padding-top: 10px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inputField input {
+    width: calc(100% - 50px);
+    width: 100%;
+    min-height: 55px;
+    border: none;
+    outline: none;
+    margin: 15px 0px;
+    border-radius: 50px;
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--black-color);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.41);
+}
+
+.inputField input::placeholder {
+    color: var(--black-color);
+}
+
+.eyeBtn {
+    position: absolute;
+    top: 125px;
+    right: 33px;
+}
+
+#footer {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#footer img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border-radius: 100%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+

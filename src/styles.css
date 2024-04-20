@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-dialog-container {
+  border-radius: 20px !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+@media (max-width: 480px),
+(max-width: 344px) {
+  .tostSuccess {
+    color: white;
+    position: relative;
+    bottom: 50px;
+    --mdc-snackbar-container-color: #429034 !important;
+  }
+
+  .tostError {
+    color: white;
+    position: relative;
+    bottom: 50px;
+    --mdc-snackbar-container-color: #823217 !important;
+  }
+}
+

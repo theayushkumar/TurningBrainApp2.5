@@ -1,0 +1,32 @@
+<div id="wrapper">
+    <br><br>
+    <div id="logo">
+        <img src="../../assets/tblogo.png" width="180px" height="180px">
+    </div>
+
+    <div id="box">
+        <form [formGroup]="loginForm" id="from_area"  class="inputField">
+            <input type="text" placeholder="Email id" formControlName="username">
+            <input (keyup.enter)="onSubmit()" [type]="hide ? 'password' : 'text'" placeholder="Password" formControlName="password">
+            <button  class="eyeBtn" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide" >
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+
+            <span class="forget" routerLink="forgetPassword"> <a></a> <a>Forget Password ? </a></span>
+            <br><br>
+            <button class="btn"  (click)="onSubmit()" >Login</button >
+
+                <br><br>
+                <span class="login"> Don`t have an account ? &nbsp; &nbsp;  <a routerLink="/country"> Signup</a></span>
+        
+            </form>
+
+    </div>
+    
+    <mat-toolbar id="footer">
+        <img src="../../assets/icon/facebook.png" alt=""> &nbsp; &nbsp; 
+        <img src="../../assets/icon/google.png" alt="">
+    </mat-toolbar>
+
+</div>
