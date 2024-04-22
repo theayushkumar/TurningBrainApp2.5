@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { BackButtonService } from './servies/back-button.service';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
@@ -8,6 +8,7 @@ import { Browser } from '@capacitor/browser';
 import { HttpClient } from '@angular/common/http';
 import { LocalNotifications , ActionPerformed} from '@capacitor/local-notifications';
 import { CrudService } from './servies/crud.service';
+import { PrivacyScreen } from '@capacitor-community/privacy-screen';
 
 
 
@@ -16,7 +17,7 @@ import { CrudService } from './servies/crud.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit , AfterViewInit {
   AppCurrentVersion = 2.4
   title = 'TurningBrain';
   login: any
@@ -32,8 +33,9 @@ export class AppComponent implements OnInit {
     private _http: HttpClient,
     private _crud: CrudService
   ) {
-
+   
   }
+ 
 
   ngOnInit() {
     this._backbtn.back(this.location.path())
@@ -42,6 +44,13 @@ export class AppComponent implements OnInit {
     this.addNotificationActionListener()
   }
 
+  ngAfterViewInit(): void {
+    PrivacyScreen.enable().then(() => {
+      console.log('Privacy enable');
+    }).catch(error => {
+      console.error('Error disabling privacy:', error);
+    });
+  }
   isLogin() {
     this.login = localStorage.getItem('loginData')
     this.login_data = JSON.parse(this.login)
